@@ -37,14 +37,15 @@ public class PetClinicApplication {
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
-	// @Bean
-	// public CommandLineRunner demoVetRepository(VetRepository vetRepository,
-	// SpecialtyRepository specialtyRepository) {
-	// return (args) -> {
-	// Collection<vets> vetsCollection = vetRepository.findAll();
-	// System.out.println(vetCollection.size());
-	// };
-	//
-	// }
+	
+	 @Bean
+	 public CommandLineRunner demoVetRepository(VetRepository vetRepository,
+	 SpecialtyRepository specialtyRepository) {
+	 return (args) -> {
+	 Collection<Vets> vetsCollection = vetRepo.findAll();
+	 System.out.println(vetCollection.size());
+	 };
+	
+	 }
 
 }
