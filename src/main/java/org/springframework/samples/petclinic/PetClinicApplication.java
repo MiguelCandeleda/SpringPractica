@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2012-2019 the original author or authors.
  *
@@ -20,18 +21,30 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
-/**
- * PetClinic Spring Boot Application.
- *
- * @author Dave Syer
- *
- */
+//* 1.Crear un objeto Vet sin Speciality
+//* 2.Persistir el objeto Vet en BBDD
+//* 3.Consultar por ID y comprobar que se ha creado correctamente
+//* 4.Editar el elemento recién creado para añadir una Speciality concreta
+//* 5.Listar todos los veterinarios existentes
+
+
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
+
 public class PetClinicApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
+
+	// @Bean
+	// public CommandLineRunner demoVetRepository(VetRepository vetRepository,
+	// SpecialtyRepository specialtyRepository) {
+	// return (args) -> {
+	// Collection<vets> vetsCollection = vetRepository.findAll();
+	// System.out.println(vetCollection.size());
+	// };
+	//
+	// }
 
 }

@@ -18,6 +18,8 @@ package org.springframework.samples.petclinic.vet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.samples.petclinic.model.Person;
+
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
@@ -26,9 +28,14 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  * the 'vets' {@link org.springframework.web.servlet.view.xml.MarshallingView}.
  *
  * @author Arjen Poutsma
+ *
+ * 1.Crear un objeto Vet sin Speciality 2.Persistir el objeto Vet en BBDD 3.Consultar por
+ * ID y comprobar que se ha creado correctamente 4.Editar el elemento recién creado para
+ * añadir una Speciality concreta 5.Listar todos los veterinarios existentes
+ *
  */
 @XmlRootElement
-public class Vets {
+public class Vets extends Person {
 
 	private List<Vet> vets;
 
